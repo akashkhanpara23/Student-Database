@@ -485,6 +485,7 @@ void print(ST *ptr)
 } 
 void rev_link(ST **ptr)
 {
+    /*
     int i, c=count(*ptr);
     ST **p = (ST **)malloc(c*sizeof(ST *));
     ST *temp;
@@ -498,6 +499,18 @@ void rev_link(ST **ptr)
     p[i]->next=p[i-1];
 
     *ptr=p[c-1];
+    */
+    ST* prev = NULL;
+    ST* current = *ptr;
+    ST* next = NULL;
+    while (current != NULL) {
+        next = current->next;
+        current->next = prev;
+
+        prev = current;
+        current = next;
+    }
+    *ptr = prev;
 } 
 void deleteall(ST **ptr)
 {
