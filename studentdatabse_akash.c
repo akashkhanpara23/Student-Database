@@ -48,33 +48,32 @@ int main()
         
         char ch;
         scanf(" %c",&ch);
-    }
-label:
 
-    switch(ch)
-    {
-        case 'A':
-        case 'a': add_end(&hptr);
-        break;
-
-        case 'D':
-        case 'd': delete(&hptr);
-        break;
+label:  switch(ch){
         
-        case 'S':
-        case 's': show (hptr,&hptr);
-        break;
+            case 'A':
+            case 'a': add_end(&hptr);
+            break;
+
+            case 'D':
+            case 'd': delete(&hptr);
+            break;
         
-        case 'M':
-        case 'm': modify(&hptr); 
-        break;
+            case 'S':
+            case 's': show (hptr,&hptr);
+            break;
+        
+            case 'M':
+            case 'm': modify(&hptr); 
+            break;
 
-        case 'V':
-        case 'v': save(hptr); 
-        break;
+            case 'V':
+            case 'v': save(hptr); 
+            break;
 
-        case 'E':
-        case 'e':printf("\n");
+            case 'E':
+            case 'e':
+                printf("\n");
                 puts("---------------------------------");
                 puts("| Enter                         |");
                 puts("| s/S: Save and exit            |");
@@ -94,20 +93,21 @@ label:
                 else if((ch == 'e') || (ch == 'E')) 
                 exit(0);//return;
 
-        case 'T':
-        case 't': sort(hptr);
-        break;
+            case 'T':
+            case 't': sort(hptr);
+            break;
         
-        case 'L': 
-        case 'l': deleteall(&hptr);
-        break;
+            case 'L': 
+            case 'l': deleteall(&hptr);
+            break;
 
-        case 'R':
-        case 'r': rev_link(&hptr);
-        break;
+            case 'R':
+            case 'r': rev_link(&hptr);
+            break;
 
-        default:printf("Invalid choice\n");
-        break;
+            default:printf("Invalid choice\n");
+            break;
+        }
     }
 }
 void delete(ST **ptr) //Function call delete(&hptr, roll); 
