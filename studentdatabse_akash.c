@@ -416,7 +416,7 @@ void sort(ST *ptr)
                 temp->next->roll=t;
                 i=1;
             }
-            temp-temp->next;
+            temp=temp->next;
         }
         last=temp;
     }while(i);
