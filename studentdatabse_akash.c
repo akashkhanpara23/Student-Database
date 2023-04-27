@@ -34,10 +34,10 @@ int main()
         printf("****STUDENT RECORD MENU**** |\n");
         printf("-----------------------------\n");
         printf("| a/A : Add new record      |\n");
-        printf("| d/D :delete a record      |\n");
-        printf("| s/S :show the list        |\n");
-        printf("| m/M: modify a record      |\n");
-        printf("| v/V save                  |\n");
+        printf("| d/D : delete a record     |\n");
+        printf("| s/S : show the list       |\n");
+        printf("| m/M : modify a record     |\n");
+        printf("| v/V : save                |\n");
         printf("| e/E : exit                |\n");
         printf("| t/T : sort the list       |\n");
         printf("| l/L : delete all records  |\n");
@@ -54,7 +54,7 @@ label:
     switch(ch)
     {
         case 'A':
-        case'a': add_end(&hptr);
+        case 'a': add_end(&hptr);
         break;
 
         case 'D':
@@ -247,12 +247,12 @@ void modify(ST **ptr)
     char ch,name [20];
 
 opt:    printf("\n");
-        printf("-----------------------------------------   \n");
+        printf("---------------------------------------------\n");
         printf("| Enter which record you want to modify:    |\n");
         printf("| r/R: Roll                                 |\n");
         printf("| n/N: Name                                 |\n");
         printf("| p/P: Percentage                           |\n");
-        printf("-----------------------------------------   \n");
+        printf("----------------------------------------- ---\n");
         printf("\n");
         scanf("%c", &ch);
         switch (ch)
@@ -473,7 +473,7 @@ void print(ST *ptr)
 {
     printf("\n");
     printf("--------------------------------------------------\n"); 
-    printf("| Roll No |         Name            |   Marks   |\n");
+    printf("| Roll No |         Name            |   Marks    |\n");
     printf("|---------|-------------------------|------------- \n");
     while (ptr != 0)
     {
