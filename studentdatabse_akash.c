@@ -130,8 +130,7 @@ lbl:    printf("\n");
         switch(ch)
         {
             case 'R':
-            case 'r':
-rl:             printf("Enter the roll you want to delete\n");
+rl:         case 'r':printf("Enter the roll you want to delete\n");
                 int roll; 
                 scanf("%d",&roll);
 
@@ -174,10 +173,9 @@ rl:             printf("Enter the roll you want to delete\n");
                 break;
 
             case 'N':
-            case 'n':
-nm:             printf("Enter the name you want to delete\n");
+nm:         case 'n':printf("Enter the name you want to delete\n");
                 char nam[20];
-                scanf("%s",nam);
+                scanf(" %s",nam);
 
                 temp=*ptr;
                 int flag=0,c=0;
@@ -254,7 +252,7 @@ opt:    printf("\n");
         printf("| p/P: Percentage                           |\n");
         printf("----------------------------------------- ---\n");
         printf("\n");
-        scanf("%c", &ch);
+        scanf(" %c", &ch);
         switch (ch)
         {
             case 'r':
