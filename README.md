@@ -44,7 +44,7 @@ Once executed, the program provides the following menu options:
 ```
 
 ## File Storage
-The records are stored in a file named **hello.txt** when saved. The format used is:
+The records are stored in a file named **databaseRecord.txt** when saved. The format used is:
 ```
 <Roll Number> <Name> <Marks>
 ```
