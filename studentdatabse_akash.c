@@ -432,7 +432,7 @@ void show(ST *ptr,ST **p)
 {
     if(*p==0)
     {
-        FILE *fp=fopen("hello.txt","r");
+        FILE *fp=fopen("databaseRecord.txt","r");
         if(fp==NULL){
             printf("File doesn't exist\n");
             return;
@@ -524,7 +524,7 @@ void deleteall(ST **ptr)
 
 void save(ST *ptr)
 {
-    FILE *fp=fopen("hello.txt","w");
+    FILE *fp=fopen("databaseRecord.txt","w");
     while(ptr!=0){
         fprintf(fp,"%d %s %f \n",ptr->roll,ptr->name,ptr->marks);
         ptr=ptr->next;
