@@ -333,7 +333,7 @@ rol:        case 'R': printf("Enter the roll\n");
                 }
                 else if(c==1){
                     printf("Enter the New Name and Mark\n");
-                    scanf(found->name, &found->marks);
+                    scanf(" %s%f",found->name, &found->marks);
                     flag=1;
                 }
                 else
