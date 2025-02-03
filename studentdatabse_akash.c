@@ -470,12 +470,14 @@ void show(ST *ptr,ST **p)
 void print(ST *ptr)
 {
     printf("\n");
-    printf("--------------------------------------------------\n"); 
-    printf("| Roll No |         Name            |   Marks    |\n");
-    printf("|---------|-------------------------|------------- \n");
+    printf("--------------------------------------------------\n");
+    printf("| %-8s | %-20s | %-10s |\n", "Roll No", "Name", "Marks"); // Header
+    printf("|----------|----------------------|-------------|\n");
     while (ptr != 0)
     {
-        printf("|   %d      |   %s                  |   %f      |\n",ptr->roll,ptr->name,ptr->marks); 
+        char formattedName[21]; // 20 characters + 1 for null terminator
+        snprintf(formattedName, sizeof(formattedName), "%.20s", ptr->name);
+        printf("| %-8d | %-20s | %-10.2f |\n", ptr->roll, formattedName, ptr->marks); 
         ptr = ptr->next;
     }
     printf("--------------------------------------------------\n");
